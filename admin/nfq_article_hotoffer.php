@@ -13,13 +13,13 @@ class Nfq_Article_Hotoffer extends oxAdminList
 
         $oArticle = oxNew('oxarticle');
         $sOxId    = $this->getEditObjectId();
+        
         if ($sOxId != '-1') {
             $oArticle->load($sOxId);
         }
 
         $this->_aViewData['edit'] = $oArticle;
-        $this->_aViewData['editlanguage'] = $this->_iEditLang;
-        return "modules/hotoffer/settings.tpl";
+        return 'nfq_article_hotoffer_settings.tpl';
     }
     
     
