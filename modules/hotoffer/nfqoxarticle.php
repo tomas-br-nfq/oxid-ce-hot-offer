@@ -1,6 +1,6 @@
 <?php
 
-class nfqarticle extends nfqarticle_parent
+class nfqoxarticle extends nfqoxarticle_parent
 {
     /**
      * Returns absolute URL of the "hot offer" imgage file that is displayed
