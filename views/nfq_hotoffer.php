@@ -26,6 +26,7 @@ class nfq_hotoffer extends oxUBase
     public function render()
     {
         parent::render();
+        $this->_aViewData['blHideBreadcrumb'] = true;
         return $this->_sThisTemplate;
     }
     
@@ -42,7 +43,7 @@ class nfq_hotoffer extends oxUBase
             $this->_oArticleList = oxNew('nfq_oxarticlelist');
             $this->_oArticleList->loadList();
         }
-        
+
         return $this->_oArticleList;
     }
     
