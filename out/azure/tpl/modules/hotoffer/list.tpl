@@ -1,0 +1,6 @@
+[{capture append="oxidBlock_content"}]
+    [{if $oView->getList()}]
+        [{include file="widget/product/list.tpl" type=$oViewConf->getViewThemeParam('sStartPageListDisplayType') head="PAGE_SHOP_HOT_OFFERS"|oxmultilangassign listId="newItems" products=$oView->getList() showMainLink=true}]
+    [{/if}]
+[{/capture}]
+[{include file="layout/page.tpl" sidebar="Right"}]
