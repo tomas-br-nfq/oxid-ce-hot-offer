@@ -13,7 +13,7 @@ class nfq_hotoffer extends oxUBase
 	/**
 	 * List of articles
 	 * 
-	 * @var nfq_oxarticlelist
+	 * @var null|nfq_oxarticlelist
 	 */
 	protected $_oArticleList;
 	
@@ -39,13 +39,8 @@ class nfq_hotoffer extends oxUBase
     {
         if ( $this->_oArticleList === null ) {
         	
-            $this->_oArticleList = array(); // nfq_oxarticlelist implements Iterator, the response must be iteratable
-            
-            $oArticleList = oxNew('nfq_oxarticlelist');
-            $oArticleList->loadList();
-            if ($oArticleList->count() ) {
-                $this->_oArticleList = $oArticleList;
-            }
+            $this->_oArticleList = oxNew('nfq_oxarticlelist');
+            $this->_oArticleList->loadList();
         }
         
         return $this->_oArticleList;

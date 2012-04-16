@@ -3,7 +3,7 @@
 class nfq_oxarticlelist extends nfq_oxarticlelist_parent
 {
 	/**
-	 * Loads list of articles that are marked as hot offers
+	 * Loads list of articles
 	 * 
 	 * @return void
 	 */
