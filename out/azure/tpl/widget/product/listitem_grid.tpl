@@ -40,6 +40,9 @@
         <span itemprop="name">[{ $product->oxarticles__oxtitle->value }]</span>
         <div class="gridPicture">
             <img itemprop="image" src="[{$product->getThumbnailUrl()}]" alt="[{ $product->oxarticles__oxtitle->value }]">
+            [{if $product->oxarticles__nfqhotofferactive->value}]
+                [{include file="widget/product/nfq_hotoffer_img.tpl"}]
+            [{/if}]
         </div>
     </a>
     [{block name="widget_product_listitem_grid_tobasket"}]

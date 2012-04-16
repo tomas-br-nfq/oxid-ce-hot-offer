@@ -45,6 +45,9 @@
             <a class="sliderHover" href="[{ $_productLink }]" title="[{ $product->oxarticles__oxtitle->value}]"></a>
             <a href="[{$_productLink}]" class="viewAllHover glowShadow corners" title="[{ $product->oxarticles__oxtitle->value}]"><span>[{oxmultilang ident="WIDGET_PRODUCT_PRODUCT_DETAILS"}]</span></a>
             <img itemprop="image" src="[{$product->getThumbnailUrl()}]" alt="[{ $product->oxarticles__oxtitle->value}]">
+            [{if $product->oxarticles__nfqhotofferactive->value}]
+                [{include file="widget/product/nfq_hotoffer_img.tpl"}]
+            [{/if}]
         </div>
     [{/block}]
 

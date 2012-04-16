@@ -52,6 +52,11 @@
                 <img itemprop="image" src="[{$oView->getActPicture()}]" alt="[{$oPictureProduct->oxarticles__oxtitle->value|strip_tags}] [{$oPictureProduct->oxarticles__oxvarselect->value|strip_tags}]">
             </div>
         [{/if}]
+        [{if $oDetailsProduct->oxarticles__nfqhotofferactive->value}]
+        <div style="position: relative;">
+            <img src="[{$oPictureProduct->getDetailedHotOfferImageUrl()}]" alt="" style="position: absolute; left: 0; z-index: 999;"/>
+        </div>
+        [{/if}]
     [{/block}]
 
     [{* article main info block *}]
